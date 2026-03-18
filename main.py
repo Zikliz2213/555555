@@ -1167,6 +1167,25 @@ body{background:#080810;color:#d4c9a8;font-family:'Segoe UI',Arial,sans-serif;mi
 
 <script>
 var API='';
+
+function amode(mode) {
+    const nickRow = document.getElementById('a-nick-row');
+    const authBtn = document.getElementById('auth-btn');
+    const atabIn = document.getElementById('atab-in');
+    const atabReg = document.getElementById('atab-reg');
+    
+    if (mode === 'in') {
+        nickRow.style.display = 'none';
+        authBtn.textContent = 'Войти';
+        atabIn.classList.add('on');
+        atabReg.classList.remove('on');
+    } else if (mode === 'reg') {
+        nickRow.style.display = 'block';
+        authBtn.textContent = 'Зарегистрироваться';
+        atabIn.classList.remove('on');
+        atabReg.classList.add('on');
+    }
+}
 // ═══════════════════════════════════════
 // DATA TABLES
 // ═══════════════════════════════════════
